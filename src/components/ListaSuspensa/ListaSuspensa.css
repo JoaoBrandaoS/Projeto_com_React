@@ -1,0 +1,22 @@
+.opcoes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.opcoes label{
+    font-size: 20px;
+}
+.opcoes select{
+  
+    padding: 10px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+.opcoes :optional{
+    color: grey;
+}
