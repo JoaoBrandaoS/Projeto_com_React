@@ -1,12 +1,16 @@
-import React from "react";
 import "./Input.css"
-function Input({nome, type, placeholder,obrigatorio,valor}){
+function Input({nome, type, placeholder,obrigatorio,valor,aoAlterado}){
 
 
+
+    const aoDigitado = (evento) => {
+        aoAlterado(evento.target.value)
+
+    }
     return(
         <div className="input-container">
             <label htmlFor={nome}>{nome}</label>
-            <input value={valor} required={obrigatorio} type={type} placeholder={placeholder} name={nome}   />
+            <input value={valor} onChange = {aoDigitado} required={obrigatorio} type={type} placeholder={placeholder} name={nome}   />
         </div>
     )
 }
