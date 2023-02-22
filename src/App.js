@@ -60,14 +60,15 @@ function App() {
       <Form times ={times.map(time => time.nome)} 
       aoColaboradorCadastrado={colaborador => 
       aoNovoColaboradorAdicionado(colaborador)}/>
-
-      {times.map(time => <Time key ={time.nome} 
-      time = {time.nome}
-      corPrimaria={time.corPrimaria}
-      corSecundaria = {time.corSecundaria} 
-      colaboradores ={colaboradores.filter(colaborador => colaborador.time === time.nome)}
-      />)}
-
+      <div>
+        {times.map(time => <Time key ={time.nome} 
+        time = {time.nome}
+        corPrimaria={time.corPrimaria}
+        corSecundaria = {time.corSecundaria} 
+        colaboradores ={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+        />)}
+      </div>
+      <Rodape />
       
     </div>
   )
